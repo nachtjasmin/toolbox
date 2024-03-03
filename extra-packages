@@ -1,10 +1,10 @@
 curl
 fish
 git-lfs
+helix
 htop
 jq
 just
 kitty-terminfo
-neovim
 vim
 wl-clipboard
