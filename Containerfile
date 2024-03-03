@@ -14,7 +14,8 @@ RUN dnf -y install \
     https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
     https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm && \
     grep -v '^#' /extra-packages | xargs dnf -y install --setopt=install_weak_deps=False && \
-    rm /extra-packages
+    rm /extra-packages && \
+	dnf clean all
 
 # Install fish script for automatic dotfile configuration.
 COPY install-dotfiles.fish /etc/fish/conf.d/
