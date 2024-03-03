@@ -1,0 +1,6 @@
+pre-commit:
+  commands:
+    sort_extra_packages:
+      run: sort --stable -o extra-packages extra-packages
+      stage_fixed: true
+
